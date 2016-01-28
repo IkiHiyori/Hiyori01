@@ -1,2 +1,2 @@
-# IkiHiyori.github.io
-ｉ　ａｍ　ｈｉｙｏｒｉ
+# Iki Hiyori
+welcome to my blog
