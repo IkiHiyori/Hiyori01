@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>首页|雷智麟的博客</title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<script type="text/javascript">
+		function changeMenuColor(obj){
+			var lmenuList = document.getElementsByTagName("a");
+			for (var i = 0; i < lmenuList.length; i++) {
+				if(lmenuList[i].className=="menu"){
+					lmenuList[i].style.background = "#1abc9c";
+				}
+			}
+			var rmenuList = document.getElementsByTagName("ul");
+			for (var i = 0; i < rmenuList.length; i++) {
+				rmenuList[i].style.display="none";
+			}
+			obj.style.background = "#303030";
+			switch(obj.id){
+				case "l1":{
+					var rul = document.getElementById("r1");
+					rul.style.display="block";
+				}
+				break;
+				case "l2":{
+					var rul = document.getElementById("r2");
+					rul.style.display="block";
+				}
+				break;
+				case "l3":{
+					var rul = document.getElementById("r3");
+					rul.style.display="block";
+				}
+				break;
+				case "l4":{
+					var rul = document.getElementById("r4");
+					rul.style.display="block";
+				}
+				break;
+				case "l5":{
+					var rul = document.getElementById("r5");
+					rul.style.display="block";
+				}
+				break;
+				case "l6":{
+					var rul = document.getElementById("r6");
+					rul.style.display="block";
+				}
+			}
+			return false;
+	    }
+	    function navCtrl(){
+	    	var lnav = document.getElementById("menu-left");
+	    	var rnav = document.getElementById("menu-right");
+	    	if(lnav.style.display == "block" || rnav.style.display == "block"){
+	    		lnav.style.display="none";
+	    		rnav.style.display="none";
+	    	}
+	    	else {
+	    		lnav.style.display="block";
+	    		rnav.style.display="block";
+	    	}
+	    	
+	    }
+	</script>
+</head>
+<body>
+	<nav>
+		<div id="menu-left">
+			<a href="#"><img src="image/deer3.png"></a>
+			<a href="#" onclick="changeMenuColor(this)" id="l1" class="menu">读书</a>
+			<a href="#" onclick="changeMenuColor(this)" id="l2" class="menu">生活</a>
+			<a href="#" onclick="changeMenuColor(this)" id="l3" class="menu">绘画</a>
+			<a href="#" onclick="changeMenuColor(this)" id="l4" class="menu">厨房</a>
+			<a href="#" onclick="changeMenuColor(this)" id="l5" class="menu">科研</a>
+			<a href="#" onclick="changeMenuColor(this)" id="l6" class="menu">技术</a>
+			<a href="#" onclick="changeMenuColor(this)" id="l7" class="menu">标签</a>
+			<a href="#" onclick="changeMenuColor(this)" id="l8" class="menu">归档</a>
+			<a href="#" onclick="changeMenuColor(this)" id="l9" class="menu">关于</a>
+		</div>
+
+		<div id="menu-right">
+			<ul id="r1" class="menu">
+				<li><a href="#">2016年阅读书单</a></li>
+				<li><a href="#">2015年阅读书单</a></li>
+				<li><a href="#">每个人的金线</a></li>
+				<li><a href="#">读《红楼梦》</a></li>
+				<li><a href="#">2014年阅读书单</a></li>
+				<li><a href="#">2013年阅读书单</a></li>
+				<li><a href="#">2012年阅读书单</a></li>
+				<li><a href="#">2011年阅读书单</a></li>
+				<li><a href="#">2010年阅读书单</a></li>
+			</ul>
+			<ul id="r2" class="menu">
+				<li><a href="#">吉他上弦枕的DIY调节</a></li>
+				<li><a href="#">找工作总结</a></li>
+				<li><a href="#">学不会</a></li>
+				<li><a href="#">致友人书</a></li>
+				<li><a href="#">Seeker的回信</a></li>
+			</ul>
+			<ul id="r3" class="menu">
+				<li><a href="#">租房奇遇记</a></li>
+				<li><a href="#">海岸公路</a></li>
+				<li><a href="#">坐在露天酒吧</a></li>
+				<li><a href="#">午后的操场</a></li>
+				<li><a href="#">小礼物Little Lady</a></li>
+				<li><a href="#">与亚敏走在石像路</a></li>
+				<li><a href="#">一只猫</a></li>
+			</ul>
+			<ul id="r4" class="menu">
+				<li><a href="#">黑椒牛排</a></li>
+				<li><a href="#">煎蛋吐司</a></li>
+				<li><a href="#">黄豆焖猪手</a></li>
+				<li><a href="#">葱油鲤鱼</a></li>
+				<li><a href="#">油爆虾</a></li>
+				<li><a href="#">绿豆百合羹</a></li>
+			</ul>
+			<ul id="r5" class="menu">
+				<li><a href="#">从二次型最优化问题中理解矩阵特征值的意义</a></li>
+				<li><a href="#">牛顿法与拟牛顿法（DFP BFGS LBFGS VLBFGS）</a></li>
+				<li><a href="#">大数据机器学习初探---南大李武军</a></li>
+				<li><a href="#">我的报告 Decentralized Privacy-Preserving Low-Rank Matrix Completion</a></li>
+				<li><a href="#">凸优化的一些基础算法</a></li>
+				<li><a href="#">什么是 P, NP, NP-complete, NP-hard</a></li>
+				<li><a href="#">阿里巴巴大数据竞赛回顾与总结</a></li>
+				<li><a href="#">Matlab科研小贴士</a></li>
+				<li><a href="#">动态一致平均问题算法-EXTRA和DAC</a></li>
+				<li><a href="#">对于一致平均问题的理解</a></li>
+				<li><a href="#">各类范数</a></li>
+				<li><a href="#">低秩矩阵补全</a></li>
+			</ul>
+			<ul id="r6" class="menu">
+				<li><a href="#">Mac以及Windows上搭建C++工作环境</a></li>
+				<li><a href="#">Git常用命令速查表</a></li>
+				<li><a href="#">在Mac上用LaTeX写漂亮的简历</a></li>
+				<li><a href="#">Yosemite OS X 10.10 Matlab 2012a停止工作的解决办法</a></li>
+				<li><a href="#">Mac安装unrar和rar解压缩工具</a></li>
+				<li><a href="#">Linux 4：磁盘与文件系统管理</a></li>
+				<li><a href="#">Linux 3：文件与目录管理</a></li>
+				<li><a href="#">Linux 2：文件权限与目录配置</a></li>
+				<li><a href="#">Markdown输入LaTeX数学公式</a></li>
+				<li><a href="#">Linux 1：登陆与在线求助man page</a></li>
+				<li><a href="#">Linux 0：实际问题</a></li>
+				<li><a href="#">Mac远程桌面连接Windows</a></li>
+				<li><a href="#">在Mac上通过Sublime、Skim编辑LaTeX</a></li>
+				<li><a href="#">LaTeX beamer制作幻灯片</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<section>
+	</section>
+	
+	<a href="#" id="navCtrl" onclick="navCtrl()"></a>
+	<script type="text/javascript">
+		changeMenuColor(document.getElementById("l1"));
+	</script>
+</body>
+</html>
