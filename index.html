@@ -1,128 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
-	<title>首页|张小凡的博客</title>
-	<link rel="stylesheet" type="text/css" href="index.css">
-	<script type="text/javascript">
-		function changeMenuColor(obj){
-			var lmenuList = document.getElementsByTagName("a");
-			for (var i = 0; i < lmenuList.length; i++) {
-				if(lmenuList[i].className=="menu"){
-					lmenuList[i].style.background = "#1abc9c";
-				}
-			}
-			var rmenuList = document.getElementsByTagName("ul");
-			for (var i = 0; i < rmenuList.length; i++) {
-				rmenuList[i].style.display="none";
-			}
-			obj.style.background = "#303030";
-			switch(obj.id){
-				case "l1":{
-					var rul = document.getElementById("r1");
-					rul.style.display="block";
-				}
-				break;
-				case "l2":{
-					var rul = document.getElementById("r2");
-					rul.style.display="block";
-				}
-				break;
-				case "l3":{
-					var rul = document.getElementById("r3");
-					rul.style.display="block";
-				}
-				break;
-				case "l4":{
-					var rul = document.getElementById("r4");
-					rul.style.display="block";
-				}
-				break;
-				case "l5":{
-					var rul = document.getElementById("r5");
-					rul.style.display="block";
-				}
-				break;
-				case "l6":{
-					var rul = document.getElementById("r6");
-					rul.style.display="block";
-				}
-			}
-			return false;
-	    }
-	    function navCtrl(){
-	    	var lnav = document.getElementById("menu-left");
-	    	var rnav = document.getElementById("menu-right");
-	    	if(lnav.style.display == "block" || rnav.style.display == "block"){
-	    		lnav.style.display="none";
-	    		rnav.style.display="none";
-	    	}
-	    	else {
-	    		lnav.style.display="block";
-	    		rnav.style.display="block";
-	    	}
-	    	
-	    }
-	</script>
+	<meta charset="utf-8"/>
+	<title>小凡的博客</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
 </head>
+
 <body>
-	<nav>
-		<div id="menu-left">
-			<a href="#"><img src="image/girl.jpg"></a>
-			<a href="#" onclick="changeMenuColor(this)" id="l1" class="menu">读书</a>
-			<a href="#" onclick="changeMenuColor(this)" id="l2" class="menu">生活</a>
-			<a href="#" onclick="changeMenuColor(this)" id="l3" class="menu">绘画</a>
-			<a href="#" onclick="changeMenuColor(this)" id="l4" class="menu">厨房</a>
-			<a href="#" onclick="changeMenuColor(this)" id="l6" class="menu">技术</a>
-			<a href="#" onclick="changeMenuColor(this)" id="l7" class="menu">电影</a>
-			<a href="#" onclick="changeMenuColor(this)" id="l8" class="menu">归档</a>
-			<a href="#" onclick="changeMenuColor(this)" id="l9" class="menu">关于</a>
+
+	<div id="head">
+		<a href="http://www.IkiHiyori.cn" id="top">Motto</a>
+		<ul id="navigation">
+			<li><a href="http://www.IkiHiyori.cn">Home</a></li>
+			<li><a href="http://www.IkiHiyori.cn/html/archive.html">Archive</a></li>
+			<li><a href="http://www.IkiHiyori.cn/html/about.html">About</a></li>
+		</ul>
+		<h1>MOTTO</h1>
+		<div id="xiahuaxian"> </div>
+		<h2>IkiHiyori</h2>
+	</div>
+
+	<div id="content">
+		<div class="paragraph">
+			<h3>写在前面</h3>
+			<p>
+				现在是2016.4.23，期待已久的博客空间终于基本搭建完成。<br/>
+				整个空间搭建在github.io上，一开始尝试使用jekyll，Hexo这样的框架，然而过程繁琐，效果也不佳（其实是太懒了不想用Linux：），后来尝试用第三方的博客空间，网易，新浪，CSDN，广告横行像垃圾网站一样，学校倒是提供了一个blog.ustc.edu.cn，由于空间不稳定故只用其记录考研历程。<br/>
+				最后干脆裸写一个，口亨。<br/>
+				由于github不支持私有数据库，所以暂时无法实现评论功能，但后期可以考虑用PHP实现一下留言内容实时发送至邮箱。<br/>
+				感谢阿琳桑、张小凡童鞋对我肆无忌惮地支持：P
+			</p>
 		</div>
-
-		<div id="menu-right">
-			<ul id="r1" class="menu">
-				<li><a href="/2016/01/28/Book-List-2016.html">2016年阅读书单</a></li>
-				<li><a href="#">2015年阅读书单</a></li>
-				<li><a href="#">2014年阅读书单</a></li>
-				<li><a href="#">2013年阅读书单</a></li>
-				<li><a href="#">2012年阅读书单</a></li>
-				<li><a href="#">2011年阅读书单</a></li>
-				<li><a href="#">2010年阅读书单</a></li>
-			</ul>
-			<ul id="r2" class="menu">
-				<li><a href="#">找工作总结</a></li>
-				<li><a href="#">实习总结</a></li>
-				<li><a href="#">假期</a></li>
-			</ul>
-			<ul id="r3" class="menu">
-				<li><a href="#">涂鸦1</a></li>
-				<li><a href="#">涂鸦2</a></li>
-			</ul>
-			<ul id="r4" class="menu">
-				<li><a href="#">寿司</a></li>
-				<li><a href="#">煎蛋</a></li>
-
-			</ul>
-			<ul id="r6" class="menu">
-				<li><a href="#">Git常用命令速查表</a></li>
-				<li><a href="#">Linux 4：磁盘与文件系统管理</a></li>
-				<li><a href="#">Linux 3：文件与目录管理</a></li>
-				<li><a href="#">Linux 2：文件权限与目录配置</a></li>
-				<li><a href="#">Linux 1：登陆与在线求助man page</a></li>
-				<li><a href="#">Linux 0：实际问题</a></li>
-
-			</ul>
+		<div class="paragraph">
+			<h3>C++ Primer 学习笔记</h3>
+			<p>
+				在使用C++ Primer学习C++的过程中，每一小节都产生一篇完全原创的学习笔记，用问答的形式展现。笔记内容并非对书中的内容进行复述，所有问答的内容旨在理解书中所讲内容后对细节或一些关键概念进一步阐述。<br/>
+			</p>
 		</div>
-	</nav>
-	
+	</div>
 
-	<section>
-		test testtesttest
-	</section>
-	
-	<a href="#" id="navCtrl" onclick="navCtrl()"></a>
-	<script type="text/javascript">
-		changeMenuColor(document.getElementById("l1"));
-	</script>
+	<div id="footer">
+		<span>Copyright © 2016 ZillyRex.com v1.0, All rights reserved</span>
+	</div>
+
+	<a id="to-top" href="#head" target="_self"> </a>
 </body>
 </html>
+Contact GitHub API Training Shop Blog About
+© 2017 GitHub, Inc. Terms Privacy Security Status Help
